@@ -14,6 +14,11 @@
     direction: rtl;  /* <-- the trick */   
 }
 
+.imageWrapper div:last-child{
+    margin: 0px auto;
+
+}
+
 .imageWrapper img{
     transition: .5s ease-in-out;;
 } 
@@ -32,13 +37,14 @@
 .favorites{
     position: absolute;
     background: rgba(0,0,0,0.8);
-    width: 90%;
+    width: 100%;
     transition: 0.5s ease;
     opacity: 0;
     bottom: 0;
     padding: 20px;
     font-size: 20px;
     text-align: center;
+    margin: 0px auto;
     
 
 }
