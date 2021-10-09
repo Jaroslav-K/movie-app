@@ -10,7 +10,10 @@ const MovieSearch = (props) => {
                     
                     <div className={classes.imageWrapper}>
                         <img src={movie.Poster} alt='movie'></img>
-                        <div className={classes.favorites}>
+                        <div 
+                            onClick={()=> props.handleFavouritesClick(movie)} 
+                            className={classes.favorites}
+                        >
                             <FavouriteComponent/>
                         </div>  
                     </div>
