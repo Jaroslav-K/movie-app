@@ -4,7 +4,7 @@ import './App.css';
 import Header from './components/Header/Header';
 import MovieSearch from './components/MovieSearch/MovieSearch';
 import SearchBox from './components/SearchBox/SearchBox';
-
+import AddFavourite from './components/Favourites/Favourites';
 
 /*import classes from './MovieSearch.module.css'*/
 
@@ -35,7 +35,7 @@ const App = () => {
         <SearchBox searchValue={searchValue} setSearchValue={setSearchValue}/>
       </div>
       <div>
-        <MovieSearch movies= {movies} />
+        <MovieSearch movies= {movies} favouriteComponent={AddFavourite} />
       </div>
     </div>  
     
