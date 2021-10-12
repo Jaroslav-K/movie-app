@@ -1,6 +1,10 @@
+SIGP - MOVIE - APP, simple movie application in React.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+Bootstrap actually never used.
 
 ## Available Scripts
 
