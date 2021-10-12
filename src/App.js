@@ -113,9 +113,9 @@ function App() {
             favourites={favourites}
             addFavouriteMovie={removeFavouriteMovie}
             AddFavourite={RemoveFavourites}
-            // ShowDetail={setShowDetail}
-            // DetailRequest={setDetailRequest}
-            // ActivateModal={setActivateModal}
+            ShowDetail={setShowDetail}
+            DetailRequest={setDetailRequest}
+            ActivateModal={setActivateModal}
             // isDisplayed={activateModal}
             // data={detail}
             // detailRequest = {detailRequest}
