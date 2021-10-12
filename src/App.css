@@ -1,4 +1,11 @@
+@import '~antd/dist/antd.css';
+
 body{
   background: #141414;
   color: #ccaa35;
 }
+
+.site-page-header-ghost-wrapper ::selection{
+  background: black;
+}
+

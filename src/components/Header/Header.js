@@ -11,44 +11,14 @@ const Header = () => {
         onBack={() => window.history.back()}
         title="Netflux"
         subTitle="for cheap."
-         extra={[
-        //   <Button key="3">Operation</Button>,
-        //   <Button key="2">Operation</Button>,
+        extra={[
           <Button key="1" type="primary">
-            <NavLink to="/favourites">
-                Favourites
-            </NavLink>
-          </Button>
-        
+            <NavLink to="/favourites">Favourites</NavLink>
+          </Button>,
         ]}
-      >
-        {/* <Descriptions size="small" column={3}>
-        <Descriptions.Item label="Created">Lili Qu</Descriptions.Item>
-        <Descriptions.Item label="Association">
-        <a>421421</a>
-        </Descriptions.Item>
-        <Descriptions.Item label="Creation Time">2017-01-10</Descriptions.Item>
-        <Descriptions.Item label="Effective Time">2017-10-10</Descriptions.Item>
-        <Descriptions.Item label="Remarks">
-        Gonghu Road, Xihu District, Hangzhou, Zhejiang, China
-        </Descriptions.Item>
-    </Descriptions>  */}
-      </PageHeader>
+      ></PageHeader>
     </div>
   )
 }
-
-/*import React from 'react';
-
-import { NavLink } from "react-router-dom"
-import classes from "./Header.module.css"
-
-const Header = (props) => {
-    return(
-        <div>
-            <h1>{props.heading}</h1>
-        </div>
-    )
-}*/
 
 export default Header
