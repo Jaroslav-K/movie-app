@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
 import { Route, Switch } from "react-router-dom"
 
-import {Modal} from "antd"
+import { Modal } from "antd"
 import "antd/dist/antd.css"
 
 import Header from "./components/Header/Header"
@@ -39,24 +39,26 @@ function App() {
 
   useEffect(() => {
     getMovieRequest(searchValue)
-  }, [searchValue])
+  }, [searchValue]);
 
   useEffect(() => {
     const movieFavourites = JSON.parse(
       localStorage.getItem("react-movie-app-favourites")
     )
-    setFavourites(movieFavourites)
-  }, [])
+    if (movieFavourites) {
+      setFavourites(movieFavourites);
+    }
+  }, []);
 
   const saveToBrowserStorage = (items) => {
-    localStorage.setItem("react-movie-app-favourites", JSON.stringify(items))
-  }
+    localStorage.setItem("react-movie-app-favourites", JSON.stringify(items));
+  };
 
   const addFavouriteMovie = (movie) => {
     const newFavouriteList = [...favourites, movie]
     setFavourites(newFavouriteList)
     saveToBrowserStorage(newFavouriteList)
-  }
+  };
 
   const removeFavouriteMovie = (movie) => {
     const newFavouriteList = favourites.filter(
@@ -64,11 +66,7 @@ function App() {
     )
     setFavourites(newFavouriteList)
     saveToBrowserStorage(newFavouriteList)
-  }
-
- 
-
-  
+  };
 
   return (
     <Switch>
@@ -82,26 +80,26 @@ function App() {
           />
         </div>
         <div>
-            <MovieSearch
-              movies = {movies}
-              handleFavouritesClick={addFavouriteMovie}
-              favouriteComponent={AddFavourite}
-              ShowDetail={setShowDetail}
-              DetailRequest={setDetailRequest}
-              ActivateModal={setActivateModal}
-            />  
+          <MovieSearch
+            movies={movies}
+            handleFavouritesClick={addFavouriteMovie}
+            favouriteComponent={AddFavourite}
+            ShowDetail={setShowDetail}
+            DetailRequest={setDetailRequest}
+            ActivateModal={setActivateModal}
+          />
         </div>
         <div>
-        <Modal
-          title="Detail"
-          centered
-          visible={activateModal}
-          onCancel={() => setActivateModal(false)}
-          footer={null}
-          width={800}
-        >
-          {detailRequest === false ? <MovieDetail {...detail} /> : <Loader />}
-        </Modal>
+          <Modal
+            title="Detail"
+            centered
+            visible={activateModal}
+            onCancel={() => setActivateModal(false)}
+            footer={null}
+            width={800}
+          >
+            {detailRequest === false ? <MovieDetail {...detail} /> : <Loader />}
+          </Modal>
         </div>
       </Route>
       <Route path="/favourites">
@@ -119,7 +117,6 @@ function App() {
             // isDisplayed={activateModal}
             // data={detail}
             // detailRequest = {detailRequest}
-            
           />
         </div>
       </Route>
